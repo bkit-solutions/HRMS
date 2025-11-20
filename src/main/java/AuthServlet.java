@@ -9,7 +9,7 @@ import org.mindrot.jbcrypt.BCrypt;
 public class AuthServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/EmployeeManagementSystem";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/employeemanagementsystem";
     private static final String JDBC_USER = "==Mysql_Username==";
     private static final String JDBC_PASS = "==Mysql_Password==";
 
