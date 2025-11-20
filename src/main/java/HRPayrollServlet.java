@@ -9,7 +9,7 @@ import org.json.JSONObject;
 
 @WebServlet("/HRPayrollServlet")
 public class HRPayrollServlet extends HttpServlet {
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/EmployeeManagementSystem";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/employeemanagementsystem";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASS = "==Mysql_Password==";
 
