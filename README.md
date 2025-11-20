@@ -89,7 +89,7 @@ must be imported before running the project.
 ### **Steps:**
 1. Create a new database:
 ```sql
-CREATE DATABASE hrms;
+CREATE DATABASE employeemanagementsystem;
 ```
 
 2. Import the SQL file using:
@@ -117,7 +117,7 @@ src/main/java/
 update your MySQL username & password:
 
 ```java
-String url = "jdbc:mysql://localhost:3306/hrms";
+String url = "jdbc:mysql://localhost:3306/employeemanagementsystem";
 String username = "your_mysql_username";
 String password = "your_mysql_password";  // Set your real password
 Class.forName("com.mysql.cj.jdbc.Driver");
