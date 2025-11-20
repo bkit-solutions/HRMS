@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Employee Management System (EMS)</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="c:\Users\GOTTA LOKESH VARDHAN\Downloads\1000_F_240778787_MCHAVaEKiDZcMmMsgElqSiGmgXrQ2l7F-removebg-preview.png" alt="">
+        <h1 class="sitename">EMS</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+			
+			<li><a href="hr_dashboard.html">Dashboard</a></li>
+			        
+			        
+			        <li><a href="attendance-hr.html">Attendance</a></li>
+					
+					<li><a href="hr-payroll.html">Payroll</a></li>
+			       
+			        <li><a href="hr_leave.html">Leaves Management</a></li>
+					
+					
+			        <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="index.html">Logout</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+	<section id="hero" class="hero section">
+	    <div class="hero-bg">
+	        <img src="assets/img/hero-bg-light.webp" alt="">
+	    </div>
+	    <div class="container text-center">
+	        <div class="d-flex flex-column justify-content-center align-items-center">
+	            <h1 data-aos="fade-up">Welcome, HR! <span>Manage Your Workforce Efficiently.</span></h1>
+	            <p data-aos="fade-up" data-aos-delay="100">
+	                Oversee employee data, manage departments, track attendance, process payroll, generate reports, and ensure compliance.
+	            </p>
+	            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+	                <a href="/employees" class="btn-get-started">Manage Employees</a>
+	                <a href="https://youtu.be/mnOplCOOmiM?si=bCbzstV35fHH2iSB" class="glightbox btn-watch-video d-flex align-items-center">
+	                    <i class="bi bi-play-circle"></i><span>Watch HR Guide</span>
+	                </a>
+	            </div>
+	            <img src="assets/img/hero-services-img.webp" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
+	        </div>
+	    </div>
+	</section>
+<!-- /Hero Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section light-background">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Performance Management</a></h4>
+                <p class="description">Monitors employee performance metrics,Provides feedback and appraisal tools,Tracks key performance indicators.</p>
+              </div>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Reports & Analytics</a></h4>
+                <p class="description">Provides insights into employee productivity, salaries, and leave patterns,Generates HR reports for decision-making.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item d-flex">
+              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div>
+                <h4 class="title"><a href="#" class="stretched-link">Employee Database Management</a></h4>
+                <p class="description">Stores employee details (Name, ID, Contact, Position, Department),Manages hiring, onboarding, promotions, and terminations.</p>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Who We Are</p>
+            <h3>Dedicated team of professionals</h3>
+            <p class="fst-italic">
+              Our goal is to help businesses streamline HR operations, improve workforce efficiency, and enhance employee experiences through our advanced Employee Management System (EMS).
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Comprehensive Employee Management – Store, update, and track employee data.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Attendance & Leave Management – Automate time tracking, leave requests, and approvals.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Payroll & Salary Processing – Ensure error-free payroll calculations and payslip generation.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Performance Evaluation & Growth – Monitor employee progress, set goals.</span></li>
+
+              <li><i class="bi bi-check-circle"></i> <span>Reports & Analytics – Gain insights into workforce trends, attendance patterns.</span></li>
+
+            </ul>
+            <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="assets/img/about-company-1.jpg" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12">
+                    <img src="assets/img/about-company-2.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="assets/img/about-company-3.jpg" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Departments</h2>
+        <p> Employee Management System (EMS) plays a vital role in organizing employees into different functional areas.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+        <div class="row justify-content-between">
+
+          <div class="col-lg-5 d-flex align-items-center">
+
+            <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+                  <i class="bi bi-binoculars"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Department Classification</h4>
+                    <p>
+                      Categorizes employees based on their functional areas such as HR, Finance, IT, Sales, Marketing, Operations, and Support.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+                  <i class="bi bi-box-seam"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Department Head & Team Management</h4>
+                    <p>
+                      Assigns department heads or managers who oversee teams,
+                      Displays a list of team members and their roles within the department.
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+                  <i class="bi bi-brightness-high"></i>
+                  <div>
+                    <h4 class="d-none d-lg-block">Employee Assignment & Transfers</h4>
+                    <p>
+                      Allows HR to assign employees to specific departments.
+                      Facilitates inter-department transfers based on promotions or organizational changes.
+                      
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul><!-- End Tab Nav -->
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="tab-pane fade active show" id="features-tab-1">
+                <img src="assets/img/tabs-1.jpg" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-2">
+                <img src="assets/img/tabs-2.jpg" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+
+              <div class="tab-pane fade" id="features-tab-3">
+                <img src="assets/img/tabs-3.jpg" alt="" class="img-fluid">
+              </div><!-- End Tab Content Item -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Features Details Section -->
+    <section id="features-details" class="features-details section">
+
+      <div class="container">
+
+        <div class="row gy-4 justify-content-between features-item">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <img src="assets/img/features-1.jpg" class="img-fluid" alt="">
+          </div>
+
+          <div class="col-lg-5 d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>Reports & Analytics</h3>
+              <p>
+                Generates reports on employee distribution, department performance, and project outcomes,
+                Helps management analyze resource allocation and workforce efficiency.
+              </p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+          </div>
+
+        </div><!-- Features Item -->
+
+        <div class="row gy-4 justify-content-between features-item">
+
+          <div class="col-lg-5 d-flex align-items-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="content">
+              <h3>Benefits of a Department Module in EMS</h3>
+              <p>
+                Allows businesses to create custom departments as per organizational needs.
+              </p>
+              <ul>
+                <li><i class="bi bi-easel flex-shrink-0"></i> Organized Workforce – Employees are structured based on their roles and expertise.</li>
+                <li><i class="bi bi-patch-check flex-shrink-0"></i>Improved Management – HR and managers can efficiently oversee teams.</li>
+                <li><i class="bi bi-brightness-high flex-shrink-0"></i> Enhanced Collaboration – Teams within departments can communicate and work together effectively.</li>
+              </ul>
+              <p></p>
+              <a href="#" class="btn more-btn">Learn More</a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/features-2.jpg" class="img-fluid" alt="">
+          </div>
+
+        </div><!-- Features Item -->
+
+      </div>
+
+    </section><!-- /Features Details Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Payroll</h2>
+        <p> automating salary processing, tax calculations, deductions, and generating payslips for employees.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row g-5">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item item-cyan position-relative">
+              <i class="bi bi-activity icon"></i>
+              <div>
+                <h3>Salary Calculation & Processing</h3>
+                <p>Automates monthly salary calculations based on employee contracts,
+                  Includes basic salary, allowances, bonuses, and deductions (such as taxes, insurance, and retirement contributions).</p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item item-orange position-relative">
+              <i class="bi bi-broadcast icon"></i>
+              <div>
+                <h3>Tax & Compliance Management</h3>
+                <p>Calculates income tax, provident fund (PF), and other statutory deductions,
+                  Generates tax reports for employees and government compliance.</p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item item-teal position-relative">
+              <i class="bi bi-easel icon"></i>
+              <div>
+                <h3>Payslip Generation & Distribution</h3>
+                <p>Creates detailed payslips with salary breakdowns,
+                  Allows employees to download or receive payslips via email.</p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item item-red position-relative">
+              <i class="bi bi-bounding-box-circles icon"></i>
+              <div>
+                <h3>Attendance & Overtime Integration</h3>
+                <p>Links with the attendance module to calculate overtime pay and deductions for absences,
+                  Adjusts salary based on leave balance and unpaid leaves.</p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item item-indigo position-relative">
+              <i class="bi bi-calendar4-week icon"></i>
+              <div>
+                <h3>Payroll Reports & Analytics</h3>
+                <p>Generates reports on salary expenses, tax deductions, and financial summaries,
+                  Helps HR and finance teams track salary trends and cost analysis.</p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item item-pink position-relative">
+              <i class="bi bi-chat-square-text icon"></i>
+              <div>
+                <h3>Salary Payment & Bank Transfers</h3>
+                <p>Integrates with bank systems for direct salary deposits,
+                  Maintains a history of payments for future reference.</p>
+                <a href="#" class="read-more stretched-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- More Features Section -->
+    <section id="more-features" class="more-features section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1" data-aos="fade-up" data-aos-delay="100">
+            <h3>Benefits of a Payroll System in EMS</h3>
+            <p>A well-structured payroll system helps businesses manage employee salaries efficiently, ensuring compliance and smooth financial operations.</p>
+
+            <div class="row">
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-easel flex-shrink-0"></i>
+                <div>
+                  <h4> Accuracy & Automation</h4>
+                  <p> Reduces human errors in salary calculations. </p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-patch-check flex-shrink-0"></i>
+                <div>
+                  <h4>Time-Saving </h4>
+                  <p>Automates payroll processes, reducing manual work.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4> Legal Compliance</h4>
+                  <p>Ensures compliance with tax and labor laws.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+              <div class="col-lg-6 icon-box d-flex">
+                <i class="bi bi-brightness-high flex-shrink-0"></i>
+                <div>
+                  <h4> Employee Satisfaction</h4>
+                  <p>Timely and transparent salary processing.</p>
+                </div>
+              </div><!-- End Icon Box -->
+
+            </div>
+
+          </div>
+
+          <div class="features-image col-lg-5 order-1 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="assets/img/features-3.jpg" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /More Features Section -->
+
+
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Frequently Asked Questions</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-container">
+
+              <div class="faq-item faq-active">
+                <h3>How does an EMS improve HR efficiency?</h3>
+                <div class="faq-content">
+                  <p>An EMS automates various HR tasks such as employee data management, attendance tracking, payroll processing, and leave approvals. This reduces manual work, eliminates errors, and allows HR teams to focus on strategic planning rather than administrative tasks.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>How does EMS enhance employee productivity?</h3>
+                <div class="faq-content">
+                  <p>EMS provides self-service portals for employees where they can check attendance, request leaves, access payroll details, and update personal information without relying on HR. This saves time and improves overall productivity.
+
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3> Does an EMS help with payroll management?</h3>
+                <div class="faq-content">
+                  <p>Yes! An EMS automates salary calculations, tax deductions, and payroll processing while ensuring compliance with labor laws. It generates payslips, tax reports, and bank transfer details for seamless salary disbursement.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3> How does an EMS improve attendance tracking?</h3>
+                <div class="faq-content">
+                  <p>The system integrates with biometric devices, RFID, or online check-in systems to accurately track employee work hours, absences, overtime, and late arrivals. This ensures transparency and fair compensation based on attendance records.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3>Can EMS help with performance management?</h3>
+                <div class="faq-content">
+                  <p>Yes! EMS includes performance evaluation modules where managers can set KPIs, track employee goals, and conduct appraisals. Employees receive feedback and performance ratings, helping businesses make informed promotion and training decisions.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3> Is EMS suitable for all types of businesses?</h3>
+                <div class="faq-content">
+                  <p> Absolutely! Whether it’s a small startup, mid-sized company, or large enterprise, an EMS can be customized to fit the organization's needs. It helps businesses manage employees effectively, reduce paperwork, and improve decision-making.
+
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+            </div>
+
+          </div><!-- End Faq Column-->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Faq Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Teammates</h2>
+        <p>Bulit a Employee Management System</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  person who starts a company and leads it as its highest-ranking executive. As the founder, they are responsible for creating the business, shaping its vision, and laying the foundation for its growth. As the CEO, they oversee the company's overall strategy, make critical business decisions.           </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\loki1.jpg" class="testimonial-img" alt="">
+                  <h3>LOKESH</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  A Designer is responsible for creating visual and functional elements that enhance a product, brand, or user experience. Their role varies depending on the industry, but generally, they focus on aesthetics, usability, and problem-solving.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\sarath.jpg" class="testimonial-img" alt="">
+                  <h3>Sarath</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  A Store Owner is responsible for managing and overseeing all aspects of their business, ensuring its success and profitability. Their role includes handling daily operations, managing inventory, setting prices, and ensuring a great customer experience.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\satya.jpg" class="testimonial-img" alt="">
+                  <h3>Satya</h3>
+                  <h4>Store Owner</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  A Freelancer is a self-employed professional who offers services to clients on a project or contract basis rather than working for a single employer. They have the flexibility to choose their projects, set their own schedules, and work from anywhere.
+
+                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\vis.jpg" class="testimonial-img" alt="">
+                  <h3>Vyshnavi</h3>
+                  <h4>Freelancer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  An Entrepreneur is someone who starts, manages, and grows a business, taking on financial risks in pursuit of success. They identify opportunities, develop innovative ideas, and turn them into profitable ventures.                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\loki1.jpg" class="testimonial-img" alt="">
+                  <h3>Suma</h3>
+                  <h4>Entrepreneur</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Pydah College of Engineering</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>A108 patavala, Kakinada, py 535022</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+91 9346295263</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>gottalokesh@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.74839013813!2d82.22253511073133!3d16.838833783890895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3820a3286aea3b%3A0x430e293212485462!2sPydah%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1741536231577!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename"> Employee Management System</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Patavala,yanam road,kakinada,</p>
+            <p>Kakinada, py 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9346295263</span></p>
+            <p><strong>Email:</strong> <span>gottalokesh@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong><span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">Suma & Co</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

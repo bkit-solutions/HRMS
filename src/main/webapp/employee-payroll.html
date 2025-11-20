@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Employee Management System (EMS)</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <!-- =======================================================
+  * Template Name: QuickStart
+  * Template URL: https://bootstrapmade.com/quickstart-bootstrap-startup-website-template/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="Employee.html" class="logo d-flex align-items-center me-auto">
+        <img src="c:\Users\GOTTA LOKESH VARDHAN\Downloads\1000_F_240778787_MCHAVaEKiDZcMmMsgElqSiGmgXrQ2l7F-removebg-preview.png" alt="">
+        <h1 class="sitename">EMS</h1>
+      </a>
+
+      
+	  
+	  <nav id="navmenu" class="navmenu">
+	  	      <ul>
+	  	         
+	  	          <li><a href="attendance-employee.html">Attendance</a></li>
+	  	          <li><a href="employee-payroll.html">Payroll</a></li>
+	  			  <li><a href="employee_leave.html">Leaves</a></li>
+	  			  <li><a href="#contact">Contact HR</a></li>
+	  	      </ul>
+	  	      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+	  	  </nav>
+
+
+      <a class="btn-getstarted" href="index.html">Logout</a>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+	<section id="hero" class="hero section">
+	    <div class="hero-bg">
+	        <img src="assets/img/hero-bg-light.webp" alt="">
+	    </div>
+	    <div class="container text-center">
+	        <div class="d-flex flex-column justify-content-center align-items-center">
+	             <h1 data-aos="fade-up">Welcome, <span id="employeeName">Employee</span>! <br>Your Work. Your Growth.</h1>
+	            <p data-aos="fade-up" data-aos-delay="100">
+	                Track attendance, access payroll details, request leaves, view reports, and connect with HR.
+	            </p>
+	            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+	                <a href="/attendance" class="btn-get-started">View Attendance</a>
+	                <a href="https://youtu.be/mnOplCOOmiM?si=bCbzstV35fHH2iSB" class="glightbox btn-watch-video d-flex align-items-center">
+	                    <i class="bi bi-play-circle"></i><span>Watch Employee Guide</span>
+	                </a>
+	            </div>
+	            <img src="assets/img/hero-services-img.webp" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
+	        </div>
+	    </div>
+	</section>
+<!-- /Hero Section -->
+
+   
+
+		
+<div class="container payroll-container">
+    <h2 class="text-center">My Payroll History</h2>
+    
+    <!-- Month/Year Filter -->
+    <div class="row mb-3">
+        <div class="col-md-4">
+            <label for="filterMonth"><strong>Select Month:</strong></label>
+            <select id="filterMonth" class="form-control">
+                <option value="">All</option>
+                <option value="January">January</option>
+                <option value="February">February</option>
+                <option value="March">March</option>
+                <option value="April">April</option>
+                <option value="May">May</option>
+                <option value="June">June</option>
+                <option value="July">July</option>
+                <option value="August">August</option>
+                <option value="September">September</option>
+                <option value="October">October</option>
+                <option value="November">November</option>
+                <option value="December">December</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="filterYear"><strong>Select Year:</strong></label>
+            <input type="number" id="filterYear" class="form-control" min="2020" max="2050" value="2024">
+        </div>
+        <div class="col-md-4">
+            <button class="btn btn-primary mt-4" onclick="fetchPayroll()">Filter</button>
+        </div>
+    </div>
+
+    <!-- Payroll Table -->
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Salary</th>
+                <th>Bonuses</th>
+                <th>Deductions</th>
+                <th>Net Salary</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="payrollRecords">
+            <!-- Payroll data will be inserted dynamically -->
+        </tbody>
+    </table>
+
+    <p id="noRecordsMessage" class="text-center text-muted" style="display: none;">No payroll records found.</p>
+</div>
+
+
+    </section><!-- /Faq Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Teammates</h2>
+        <p>Bulit a Employee Management System</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  person who starts a company and leads it as its highest-ranking executive. As the founder, they are responsible for creating the business, shaping its vision, and laying the foundation for its growth. As the CEO, they oversee the company's overall strategy, make critical business decisions.           </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\loki1.jpg" class="testimonial-img" alt="">
+                  <h3>LOKESH</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  A Designer is responsible for creating visual and functional elements that enhance a product, brand, or user experience. Their role varies depending on the industry, but generally, they focus on aesthetics, usability, and problem-solving.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\sarath.jpg" class="testimonial-img" alt="">
+                  <h3>Sarath</h3>
+                  <h4>Designer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  A Store Owner is responsible for managing and overseeing all aspects of their business, ensuring its success and profitability. Their role includes handling daily operations, managing inventory, setting prices, and ensuring a great customer experience.
+                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\satya.jpg" class="testimonial-img" alt="">
+                  <h3>Satya</h3>
+                  <h4>Store Owner</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  A Freelancer is a self-employed professional who offers services to clients on a project or contract basis rather than working for a single employer. They have the flexibility to choose their projects, set their own schedules, and work from anywhere.
+
+                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\vis.jpg" class="testimonial-img" alt="">
+                  <h3>Vyshnavi</h3>
+                  <h4>Freelancer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  An Entrepreneur is someone who starts, manages, and grows a business, taking on financial risks in pursuit of success. They identify opportunities, develop innovative ideas, and turn them into profitable ventures.                </p>
+                <div class="profile mt-auto">
+                  <img src="c:\Users\GOTTA LOKESH VARDHAN\OneDrive\ドキュメント\loki1.jpg" class="testimonial-img" alt="">
+                  <h3>Suma</h3>
+                  <h4>Entrepreneur</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>Pydah College of Engineering</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>A108 patavala, Kakinada, py 535022</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+91 9346295263</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>gottalokesh@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+        <div class="row gy-4 mt-1">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.74839013813!2d82.22253511073133!3d16.838833783890895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3820a3286aea3b%3A0x430e293212485462!2sPydah%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1741536231577!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>          </div><!-- End Google Maps -->
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span class="sitename"> Employee Management System</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Patavala,yanam road,kakinada,</p>
+            <p>Kakinada, py 535022</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+91 9346295263</span></p>
+            <p><strong>Email:</strong> <span>gottalokesh@gmail.com</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 footer-newsletter">
+          <h4>Our Newsletter</h4>
+          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <form action="forms/newsletter.php" method="post" class="php-email-form">
+            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename"></strong><span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+         Designed by <a href="https://bootstrapmade.com/">Suma & Co</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
+  
+  <script>
+	document.addEventListener("DOMContentLoaded", function () {
+	    fetchPayroll();
+	});
+
+	function fetchPayroll() {
+	    const month = document.getElementById("filterMonth").value;
+	    const year = document.getElementById("filterYear").value;
+	    let url = `EmployeePayrollServlet?action=view&year=${year}`;
+
+	    if (month) {
+	        url += `&month=${month}`;
+	    }
+
+	    fetch(url)
+	        .then(response => response.json())
+	        .then(data => {
+	            let tableContent = "";
+	            if (data.records.length === 0) {
+	                document.getElementById("noRecordsMessage").style.display = "block";
+	            } else {
+	                document.getElementById("noRecordsMessage").style.display = "none";
+	                data.records.forEach(record => {
+	                    let downloadButton = record.paid_status === "Paid"
+	                        ? `<button class="btn btn-success" onclick="downloadPayslip('${record.month}', '${record.year}')">Download Payslip</button>`
+	                        : `<button class="btn btn-secondary" disabled>Pending</button>`;
+
+	                    tableContent += `<tr>
+	                        <td>${record.month}</td>
+	                        <td>${record.year}</td>
+	                        <td>${record.salary}</td>
+	                        <td>${record.bonuses}</td>
+	                        <td>${record.deductions}</td>
+	                        <td>${record.net_salary}</td>
+	                        <td class="${record.paid_status === "Paid" ? "text-success" : "text-danger"}">
+	                            ${record.paid_status}
+	                        </td>
+	                        <td>${downloadButton}</td>
+	                    </tr>`;
+	                });
+	            }
+	            document.getElementById("payrollRecords").innerHTML = tableContent;
+	        })
+	        .catch(error => console.error("Error fetching payroll data:", error));
+	}
+
+	function downloadPayslip(month, year) {
+	    window.location.href = `EmployeePayrollServlet?action=downloadPayslip&month=${month}&year=${year}`;
+	}
+
+
+  </script>
+
+
+
+</body>
+
+</html>

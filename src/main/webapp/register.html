@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Register - Employee Management System (EMS)</title>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    body {
+      background: url('assets/img/hero-bg-light.webp') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .register-container {
+      max-width: 450px;
+      margin: 100px auto;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-container h2 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      border-radius: 8px;
+    }
+
+    .btn-register {
+      width: 100%;
+      border-radius: 8px;
+      background-color: #28a745;
+      color: white;
+      font-weight: 500;
+    }
+
+    .btn-register:hover {
+      background-color: #218838;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .login-link {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="register-container">
+      <h2>Register on EMS</h2>
+
+      <form action="AuthServlet" method="post">
+        <input type="hidden" name="action" value="register">
+
+        <div class="mb-3">
+          <label for="name" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email Address</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="role" class="form-label">Select Role</label>
+          <select class="form-control" id="role" name="role" required onchange="toggleDepartmentField()">
+            <option value="Employee">Employee</option>
+            <option value="HR">HR</option>
+          </select>
+        </div>
+
+        <!-- Department Selection (Hidden when HR is selected) -->
+        <div class="mb-3" id="departmentField">
+          <label for="department" class="form-label">Select Department</label>
+          <select class="form-control" id="department" name="department">
+            <option value="IT">IT</option>
+            <option value="NON-IT">Non-IT</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-register">Register</button>
+
+        <p class="error-message" id="error-msg"></p>
+        <a href="index.html" class="login-link">Already have an account? Login</a>
+      </form>
+    </div>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    function toggleDepartmentField() {
+      const role = document.getElementById("role").value;
+      const departmentField = document.getElementById("departmentField");
+
+      if (role === "HR") {
+        departmentField.style.display = "none"; // Hide department for HR
+      } else {
+        departmentField.style.display = "block"; // Show department for employees
+      }
+    }
+  </script>
+
+</body>
+</html>
