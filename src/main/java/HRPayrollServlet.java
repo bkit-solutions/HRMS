@@ -11,7 +11,7 @@ import org.json.JSONObject;
 public class HRPayrollServlet extends HttpServlet {
     private static final String JDBC_URL = "jdbc:mysql://localhost:3306/EmployeeManagementSystem";
     private static final String JDBC_USER = "root";
-    private static final String JDBC_PASS = "ijustDh53@";
+    private static final String JDBC_PASS = "==Mysql_Password==";
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
